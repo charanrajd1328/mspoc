@@ -1,0 +1,27 @@
+server:
+  port: 8014
+  
+  
+spring:
+  datasource:
+    url: jdbc:h2:mem:currencyexcdb
+    driver-class-name: org.h2.Driver
+    username: ibm
+    password: ibm
+  h2:
+    console:
+      enabled: true
+      
+  application:
+    name: currency-ms
+    
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+    prefer-ip-address: true
+ 
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone:  http://localhost:8013/eureka  

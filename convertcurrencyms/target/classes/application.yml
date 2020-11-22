@@ -1,0 +1,14 @@
+spring:  application:    name: exccurrency  cloud:    bus:      enabled: true#      destination: configXchangebus    #rabbitmq:  #  host: ${rabbitmq.host:192.168.99.101}  #  port: ${rabbitmq.port:15672}     #  zipkin:#    enabled: true#    base-url: ${zipkin.url:http://192.168.99.101:9411}#  sleuth:#    trace-id128: true#    enabled: true#    sampler:#      probability: 1.0   
+server:  port: 8015  
+#currency-conversion-factor-service.ribbon.listOfServers=localhost:9111,localhost:9222
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      #defaultZone: ${eureka.uri:http://192.168.99.100:8761/eureka}  
+    #  defaultZone: http://192.168.99.101:8761/eureka      defaultZone: http://localhost:8013/eurekafeign:  hystrix:    enabled: truemanagement:  endpoints:    web:      exposure:        include: '*'
