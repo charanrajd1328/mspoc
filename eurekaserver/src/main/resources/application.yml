@@ -1,0 +1,8 @@
+#spring:#  application:#    name: eurekaserver    
+#server:
+#  port: 8013
+  
+#eureka:
+#  client:
+#    fetch-registry: false
+#    register-with-eureka: false    server:  port: 8013eureka:  client:    register-with-eureka: false    service-url:      defaultZone:  http://localhost:8013/eureka     spring:   application:     name: eurekaserver      
