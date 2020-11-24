@@ -1,0 +1,6 @@
+datasource.url: jdbc:h2:mem:currencyconverisonDb;DB_CLOSE_DELAY=-1
+datasource.username: sa  
+datasource.password:
+datasource.driver: org.h2.Driver
+
+defaultgreeting: "Welcome to IBM MS BOOTCAMP - updated"
